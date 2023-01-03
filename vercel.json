@@ -1,10 +1,10 @@
 {
   "functions": {
     "pages/api/text.ts": {
-      "maxDuration": 60
+      "maxDuration": 120
     },
     "pages/api/image.ts": {
-      "maxDuration": 60
+      "maxDuration": 120
     }
   }
 }
