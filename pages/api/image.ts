@@ -26,7 +26,7 @@ const TextGenerator: NextApiHandler = async (req, res) => {
   const response = await openai.createImage({
     prompt,
     n: 1,
-    size: "1024x1024",
+    size: "512x512",
   })
 
   res.json(response.data.data[0].url)
