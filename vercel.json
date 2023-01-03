@@ -1,9 +1,9 @@
 {
   "functions": {
-    "api/text.ts": {
+    "pages/api/text.ts": {
       "maxDuration": 60
     },
-    "api/image.ts": {
+    "pages/api/image.ts": {
       "maxDuration": 60
     }
   }
