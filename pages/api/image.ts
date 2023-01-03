@@ -19,7 +19,7 @@ const TextGenerator: NextApiHandler = async (req, res) => {
     return res.status(401).json({
       error: "not_authenticated",
       description:
-        "The user does not have an active session or is not authenticated.",
+        "The user does not have an active session or is not authenticated",
     })
 
   const { prompt } = JSON.parse(req.body)
