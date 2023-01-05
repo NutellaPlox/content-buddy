@@ -2368,6 +2368,11 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
+use-debounce@^9.0.2:
+  version "9.0.2"
+  resolved "https://registry.yarnpkg.com/use-debounce/-/use-debounce-9.0.2.tgz#2883982ec1eb79affec46f14047244057b78161c"
+  integrity sha512-QLyB0sxt9F5AisGDrUybCRJSLE60bTQR0yXc+IebNGUu1GCXwii1zsZl82mPGdWqDVQy7+1FKMLHQUixxf5Nbw==
+
 utf-8-validate@^5.0.2:
   version "5.0.10"
   resolved "https://registry.yarnpkg.com/utf-8-validate/-/utf-8-validate-5.0.10.tgz#d7d10ea39318171ca982718b6b96a8d2442571a2"

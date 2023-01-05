@@ -14,13 +14,13 @@ export default function ImageComponent() {
   }
 
   return (
-    <div className="flex flex-col w-4/6">
+    <div className="flex flex-col w-full px-4 md:w-4/6">
       <PromptInput
         placeholder="Show me an impressionistic painting of the sunset in the hills with a reflection in the lake."
         clickFunction={requestImage}
       />
       {output !== null && (
-        <div className="flex justify-center w-full my-16">
+        <div className="flex justify-center w-full my-6 md:my-16">
           <Image src={output} width="1024" height="1024" alt="Output image" />
         </div>
       )}

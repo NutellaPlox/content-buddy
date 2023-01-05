@@ -4,6 +4,7 @@ import Head from "next/head"
 import { useRouter } from "next/router"
 import { useState } from "react"
 import ImageComponent from "../../components/Image/ImageComponent"
+import PredictiveTextComponent from "../../components/Text/PredictiveTextComponent"
 import TextComponent from "../../components/Text/TextComponent"
 
 export default function Home() {
@@ -11,6 +12,8 @@ export default function Home() {
   const supabase = useSupabaseClient()
   const router = useRouter()
   const [isText, setIsText] = useState(true)
+  const [isImage, setIsImage] = useState(false)
+  const [isPredict, setIsPredict] = useState(false)
 
   return (
     <>
@@ -35,10 +38,12 @@ export default function Home() {
               </button>
             )}
           </div>
-          <div className="text-5xl font-semibold py-24">
+          <div className="text-5xl font-semibold pt-24 pb-8 md:pb-4 text-center md:text-left">
             <button
               onClick={() => {
                 setIsText(true)
+                setIsImage(false)
+                setIsPredict(false)
               }}
               className={`${isText ? "underline" : ""}`}
             >
@@ -48,38 +53,30 @@ export default function Home() {
             <button
               onClick={() => {
                 setIsText(false)
+                setIsImage(false)
+                setIsPredict(true)
               }}
-              className={`${!isText ? "underline" : ""}`}
+              className={`${isPredict ? "underline" : ""}`}
+            >
+              Predictive Text
+            </button>{" "}
+            |{" "}
+            <button
+              onClick={() => {
+                setIsText(false)
+                setIsImage(true)
+                setIsPredict(false)
+              }}
+              className={`${isImage ? "underline" : ""}`}
             >
               Image
             </button>
           </div>
           {isText && <TextComponent />}
-          {!isText && <ImageComponent />}
+          {isPredict && <PredictiveTextComponent />}
+          {isImage && <ImageComponent />}
         </div>
       </main>
     </>
   )
-}
-
-export const getServerSideProps = async (ctx: any) => {
-  // Create authenticated Supabase Client
-  const supabase = createServerSupabaseClient(ctx)
-  // Check if we have a session
-  const {
-    data: { session },
-  } = await supabase.auth.getSession()
-
-  if (!session) {
-    return {
-      redirect: {
-        destination: "/",
-        permanent: false,
-      },
-    }
-  }
-
-  return {
-    props: {},
-  }
 }

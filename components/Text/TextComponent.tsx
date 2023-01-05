@@ -12,13 +12,13 @@ export default function TextComponent() {
     setOutput(data.trim())
   }
   return (
-    <div className="flex flex-col w-4/6">
+    <div className="flex flex-col w-full px-4 md:w-4/6">
       <PromptInput
         placeholder="Write a song about jumping jacks."
         clickFunction={requestText}
       />
       {output !== "" && (
-        <div className="w-full mt-8 bg-gray-200 rounded-lg py-4 px-6 whitespace-pre-line">
+        <div className="w-full mt-6 bg-gray-200 rounded-lg py-4 px-6 whitespace-pre-line">
           {output}
         </div>
       )}

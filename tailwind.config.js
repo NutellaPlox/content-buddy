@@ -11,6 +11,7 @@ module.exports = {
         dark: "#151515",
         darker: "#111111",
         "gray-outline": "#777777",
+        "placeholder-gray": "#9ca3af",
       },
     },
   },

@@ -37,11 +37,13 @@ export default function Home() {
                     colors: {
                       brand: "#151515",
                       brandAccent: "#171717",
-                      messageText: "white",
+                      messageText: "#FFFFFF",
                     },
                   },
                 },
               }}
+              magicLink
+              // redirectTo="/app" TODO: figure out how redirect works. Currently not working with just this
               theme="dark"
             />
           )}
