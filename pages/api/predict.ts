@@ -44,7 +44,7 @@ const TextGenerator: NextApiHandler = async (req, res) => {
     prompt: query,
     temperature: 0.7,
     frequency_penalty: 1.19,
-    presence_penalty: 1.56,
+    presence_penalty: 1.89,
     max_tokens: 256,
   })
 

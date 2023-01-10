@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@editorjs/editorjs": "^2.26.4",
+    "@lexical/react": "^0.7.5",
     "@next/font": "13.1.1",
     "@supabase/auth-helpers-nextjs": "^0.5.2",
     "@supabase/auth-helpers-react": "^0.3.1",
@@ -19,6 +21,7 @@
     "@types/react-dom": "18.0.10",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
+    "lexical": "^0.7.5",
     "next": "13.1.1",
     "openai": "^3.1.0",
     "react": "18.2.0",

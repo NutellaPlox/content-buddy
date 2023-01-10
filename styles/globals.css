@@ -7,3 +7,40 @@ body {
   width: 100%;
   min-height: 100vh;
 }
+
+/************************ Editor Styles ************************/
+*[contenteditable="true"]:focus,
+*[contenteditable="true"]:focus-visible {
+  outline: none;
+}
+
+.editor-paragraph {
+  margin: 0;
+  position: relative;
+  padding: 12px;
+}
+
+.editor-suggestion,
+.editor-suggestion > span {
+  color: #6b7280; /* Equal to tailwind gray-500*/
+  pointer-events: none;
+  user-select: none;
+}
+
+.tree-view-output {
+  position: relative;
+}
+
+.debug-timetravel-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+}
+
+.debug-timetravel-panel {
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
