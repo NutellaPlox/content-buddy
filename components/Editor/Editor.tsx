@@ -58,7 +58,7 @@ export default function Editor({
             predictFunction={predictFunction}
             topic={topic as string}
           />
-          {/* <TreeViewPlugin /> */}
+          {/* <TreeViewPlugin  /> */}
         </LexicalComposer>
       </div>
     </div>
