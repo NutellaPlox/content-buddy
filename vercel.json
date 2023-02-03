@@ -1,11 +1,11 @@
 {
   "functions": {
     "pages/api/text.ts": {
-      "maxDuration": 60,
+      "maxDuration": 10,
       "memory": 512
     },
     "pages/api/image.ts": {
-      "maxDuration": 60,
+      "maxDuration": 10,
       "memory": 512
     }
   }
